@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body onload="alert('Welcome to the Computation page')">
+
+<input id="n1" placeholder="Number 1">
+<input id="n2" placeholder="Number 2">
+<input id="op" placeholder="+ - * / %">
+<button onclick="calc()">Compute</button><br><br>
+
+<input id="res" placeholder="Result" readonly>
+<p id="msg"></p>
+
+<script>
+function calc(){
+  let a = n1.value, b = n2.value, o = op.value.trim();
+  
+  if(isNaN(a) || isNaN(b) || a=="" || b=="")
+    return msg.innerHTML = "Enter valid numbers";
+
+  if(!["+","-","*","/","%"].includes(o))
+    return msg.innerHTML = "Invalid operator";
+
+  a = +a; b = +b;
+  let r = {"+":a+b,"-":a-b,"*":a*b,"/":a/b,"%":a%b}[o];
+
+  res.value = r;
+  msg.innerHTML = "";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Select your favourite color:</p>
+
+    <label><input type="radio" name="c" value="Red"> Red</label>
+    <label><input type="radio" name="c" value="Blue"> Blue</label>
+    <label><input type="radio" name="c" value="Green"> Green</label>
+    <label><input type="radio" name="c" value="Yellow"> Yellow</label>
+    <label><input type="radio" name="c" value="Orange"> Orange</label>
+
+    <p id="out"></p>
+
+    <script>
+        const radios = document.getElementsByName("c");
+
+        function show(color) {
+            out.innerHTML = "Your favourite color is " + color;
+        }
+
+        radios.forEach(r =>
+            r.addEventListener("click", () => show(r.value))
+        );
+    </script>
+
+</body>
+
+</html>

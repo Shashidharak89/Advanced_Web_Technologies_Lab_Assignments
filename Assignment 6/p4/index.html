@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Select your favourite color:</p>
+
+    <label><input type="radio" name="c" onclick="show('Red')"> Red</label>
+    <label><input type="radio" name="c" onclick="show('Blue')"> Blue</label>
+    <label><input type="radio" name="c" onclick="show('Green')"> Green</label>
+    <label><input type="radio" name="c" onclick="show('Yellow')"> Yellow</label>
+    <label><input type="radio" name="c" onclick="show('Orange')"> Orange</label>
+
+    <p id="out"></p>
+
+    <script>
+        function show(color) {
+            out.innerHTML = "Your favourite color is " + color;
+        }
+    </script>
+
+</body>
+
+</html>

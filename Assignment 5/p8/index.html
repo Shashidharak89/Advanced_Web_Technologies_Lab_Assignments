@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Array</title>
+</head>
+<body>
+
+<h2>Array Sorting</h2>
+
+Enter Numbers (comma separated):
+<input type="text" id="nums"><br><br>
+
+Order (asc/desc):
+<input type="text" id="order"><br><br>
+
+<button onclick="sortArray()">Sort</button>
+
+<h3 id="result"></h3>
+
+<script>
+function sortArray() {
+    let arr = document.getElementById("nums").value
+                .split(",").map(Number);
+
+    let order = document.getElementById("order").value.toLowerCase();
+
+    switch(order) {
+        case "asc":
+            arr.sort((a,b) => a - b);
+            break;
+        case "desc":
+            arr.sort((a,b) => b - a);
+            break;
+        default:
+            document.getElementById("result").innerHTML = "Invalid Order";
+            return;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Sorted: " + arr.join(", ");
+}
+</script>
+
+</body>
+</html>

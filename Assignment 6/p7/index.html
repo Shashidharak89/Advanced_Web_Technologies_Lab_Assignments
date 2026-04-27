@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="outer" style="padding:40px; background:lightblue;">
+        OUTER
+        <div id="middle" style="padding:30px; background:lightgreen;">
+            MIDDLE
+            <div id="inner" style="padding:20px; background:lightcoral;">
+                INNER (Click Me)
+            </div>
+        </div>
+    </div>
+
+    <p id="log"></p>
+
+    <script>
+        function show(msg) {
+            log.innerHTML += msg + "<br>";
+        }
+
+        // Bubbling (default)
+        outer.addEventListener("click", () => show("Outer Bubble"));
+        middle.addEventListener("click", () => show("Middle Bubble"));
+        inner.addEventListener("click", () => show("Inner Bubble"));
+
+        // Capturing
+        outer.addEventListener("click", () => show("Outer Capture"), true);
+        middle.addEventListener("click", () => show("Middle Capture"), true);
+        inner.addEventListener("click", () => show("Inner Capture"), true);
+    </script>
+
+</body>
+
+</html>

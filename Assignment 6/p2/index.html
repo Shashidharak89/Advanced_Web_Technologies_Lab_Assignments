@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <textarea id="txt" rows="6" cols="50" placeholder="Enter paragraph..."></textarea><br><br>
+
+    <input id="find" placeholder="Search / Pattern">
+    <input id="rep" placeholder="Replace with">
+    <label><input type="checkbox" id="useRegex"> Use Regex</label>
+    <button onclick="run()">Run</button>
+
+    <p id="out"></p>
+
+    <script>
+        function run() {
+            let t = document.getElementById("txt").value,
+                f = document.getElementById("find").value,
+                r = document.getElementById("rep").value,
+                useRegex = document.getElementById("useRegex").checked;
+
+            if (!f) {
+                document.getElementById("out").innerHTML = "Enter search text";
+                return;
+            }
+
+            let re;
+            try {
+                // if not regex mode → escape input
+                let pattern = useRegex ? f : f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+                re = new RegExp(pattern, "gi");
+            } catch (e) {
+                document.getElementById("out").innerHTML = "Invalid pattern";
+                return;
+            }
+
+            let matches = t.match(re),
+                count = matches ? matches.length : 0,
+                replaced = t.replace(re, r);
+
+            document.getElementById("out").innerHTML =
+                "Count: " + count + "<br><br>" +
+                "Replaced:<br>" + replaced;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form>
+        <label><input type="checkbox" name="g"> Rice</label>
+        <label><input type="checkbox" name="g"> Milk</label>
+        <label><input type="checkbox" name="g"> Eggs</label>
+        <label><input type="checkbox" name="g"> Bread</label><br><br>
+
+        <button type="button" onclick="count(this)">Count Checked</button>
+    </form>
+
+    <p id="out"></p>
+
+    <script>
+        function count(btn) {
+            let c = 0, items = btn.form.elements; // implicit array
+            for (let i = 0; i < items.length; i++)
+                if (items[i].type == "checkbox" && items[i].checked) c++;
+
+            out.innerHTML = "Checked items: " + c;
+        }
+    </script>
+
+</body>
+
+</html>

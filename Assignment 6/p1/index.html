@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input id="box" placeholder="Type something...">
+    <ul id="log"></ul>
+
+    <script>
+        const box = document.getElementById("box"),
+            log = document.getElementById("log");
+
+        function add(e) {
+            log.innerHTML = `<li>${e.type} : ${box.value}</li>` + log.innerHTML;
+        }
+
+        ["focus", "blur", "change", "keyup"].forEach(ev =>
+            box.addEventListener(ev, add)
+        );
+    </script>
+
+</body>
+
+</html>
