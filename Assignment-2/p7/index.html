@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background CSS Properties Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;   /* background-color */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            background-color: lightgreen;   /* background-color */
+            text-align: center;
+            line-height: 150px;
+            border: 2px solid black;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            background-image: url("bg2.jpeg");
+            background-repeat: repeat;      /* background-repeat */
+            border: 2px solid black;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            background-image: url("bg.jpeg");
+            background-repeat: no-repeat;   /* background-repeat */
+            background-position: center;    /* background-position */
+            border: 2px solid black;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Background Properties Demonstration</h1>
+
+    <div class="box1">
+        background-color
+    </div>
+
+    <div class="box2">
+        background-image + repeat
+    </div>
+
+    <div class="box3">
+        no-repeat + center position
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Menu with Hover Effect</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #222;
+        }
+
+        /* Remove default list styling */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;   /* Makes menu horizontal */
+        }
+
+        /* Menu items */
+        li {
+            margin: 0;
+        }
+
+        /* Links */
+        a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover effect */
+        a:hover {
+            background-color: #00bcd4;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Element Selector */
+        h1 {
+            color: darkblue;
+        }
+
+        /* Class Selector */
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ID Selector */
+        #unique {
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Group Selector */
+        h2, p {
+            color: purple;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>CSS Selectors Demonstration</h1>
+
+    <h2>Group Selector Example</h2>
+    <p>This paragraph is styled using the group selector.</p>
+
+    <p class="highlight">
+        This paragraph uses a class selector.
+    </p>
+
+    <p id="unique">
+        This paragraph uses an ID selector.
+    </p>
+
+    <p>
+        This is a normal paragraph (only group + universal apply).
+    </p>
+
+</body>
+</html>

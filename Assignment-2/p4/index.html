@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS List Properties Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* 1. list-style-type */
+        .type-example ul {
+            list-style-type: square;
+        }
+
+        .type-example ol {
+            list-style-type: upper-roman;
+        }
+
+        /* 2. list-style-position */
+        .position-inside {
+            list-style-position: inside;
+        }
+
+        .position-outside {
+            list-style-position: outside;
+        }
+
+        /* 3. list-style-image */
+        .image-example {
+            list-style-image: url("bullet.jpg");
+        }
+
+        /* 4. list-style (shorthand) */
+        .shorthand-example {
+            list-style: circle inside;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS List Properties Demonstration</h1>
+
+    <section class="type-example">
+        <h2>1. list-style-type</h2>
+        <p>Unordered List (square):</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <p>Ordered List (upper-roman):</p>
+        <ol>
+            <li>Frontend</li>
+            <li>Backend</li>
+            <li>Database</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>2. list-style-position</h2>
+
+        <p><strong>Inside:</strong></p>
+        <ul class="position-inside">
+            <li>This text wraps inside the bullet alignment.</li>
+            <li>Notice how the text aligns.</li>
+        </ul>
+
+        <p><strong>Outside (default):</strong></p>
+        <ul class="position-outside">
+            <li>This text wraps outside the bullet alignment.</li>
+            <li>This is the default behavior.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. list-style-image</h2>
+        <ul class="image-example">
+            <li>Custom Bullet 1</li>
+            <li>Custom Bullet 2</li>
+            <li>Custom Bullet 3</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. list-style (Shorthand)</h2>
+        <ul class="shorthand-example">
+            <li>Circle + Inside</li>
+            <li>Defined using shorthand</li>
+            <li>Cleaner CSS</li>
+        </ul>
+    </section>
+
+</body>
+</html>

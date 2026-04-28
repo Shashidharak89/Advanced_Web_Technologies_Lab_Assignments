@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Demonstration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;              /* Width of content */
+            height: 150px;             /* Height of content */
+
+            padding: 20px;             /* Space inside border */
+            border: 5px solid blue;    /* Border around padding */
+
+            margin: 40px auto;         /* Space outside border */
+
+            background-color: lightyellow;
+            text-align: center;
+        }
+
+        .label {
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model Demonstration</h1>
+
+    <div class="box">
+        <div class="label">Content Area</div>
+        This box demonstrates width, height, padding, border, and margin.
+    </div>
+
+</body>
+</html>
