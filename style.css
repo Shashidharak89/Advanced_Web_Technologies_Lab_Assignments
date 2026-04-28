@@ -1,30 +1,37 @@
-*{
-    margin:0;
-    padding:0;
-}
-body{
-    background-color:#D5D8DC ;
-}
-nav{
-    padding:20px;
-    background-color: #2E4053;
-    height:80px;
-    color:#BFC9CA;
-    text-align: center;
-    font-size:clamp(1rem, 2.5vw, 2rem);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.assignment{
-    margin:20px;
-    border:2px solid black;
-    border-radius:20px;
-    padding:15px;
+body {
+    background-color: #D5D8DC;
 }
-.assignment a{
+
+nav {
+    padding: 20px;
+    background-color: #2E4053;
+    height: 65px;
+    color: #BFC9CA;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.assignment {
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.assignment a {
     text-decoration: none;
 }
 
-.assignment-title{
-    font-size:larger;
-    color:black;
+.assignment a:hover {
+    color: #F1C40F;
+}
+
+.assignment-title {
+    font-size: larger;
+    color: black;
 }
