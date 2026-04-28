@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Stacking</title>
+  <style>
+    img {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="flower1.jpg" style="top:20px; left:20px;" onclick="bringTop(this)">
+  <img src="flower2.jpg" style="top:60px; left:60px;" onclick="bringTop(this)">
+  <img src="flower3.jpg" style="top:100px; left:100px;" onclick="bringTop(this)">
+  <img src="flower4.jpg" style="top:140px; left:140px;" onclick="bringTop(this)">
+
+  <script>
+    let z = 1;
+    function bringTop(img) {
+      z++;
+      img.style.zIndex = z;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Move Paragraph</title>
+    <style>
+        #para {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    X: <input type="number" id="x">
+    Y: <input type="number" id="y">
+    <button onclick="movePara()">Move</button>
+
+    <p id="para">This is a movable paragraph.</p>
+
+    <script>
+        function movePara() {
+            let x = document.getElementById("x").value;
+            let y = document.getElementById("y").value;
+            let p = document.getElementById("para");
+            p.style.left = x + "px";
+            p.style.top = y + "px";
+        }
+    </script>
+
+</body>
+
+</html>

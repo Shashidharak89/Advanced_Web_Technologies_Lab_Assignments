@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Move Text</title>
+  <style>
+    #text {
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="text">Welcome to NMAMIT Nitte</p>
+
+  <button onclick="moveText()">Move Text</button>
+
+  <script>
+    function moveText() {
+      document.getElementById("text").style.left = "300px";
+      document.getElementById("text").style.top = "200px";
+    }
+  </script>
+
+</body>
+
+</html>

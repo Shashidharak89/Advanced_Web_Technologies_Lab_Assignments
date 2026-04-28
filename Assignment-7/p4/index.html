@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mouse Events</title>
+  <style>
+    #heading {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="heading" onmouseover="changeStyle()" onmouseout="resetStyle()">
+    Welcome to NMAMIT,Nitte
+  </h1>
+
+  <p onmousemove="showCoords(event)">
+    Move mouse over this paragraph to see X and Y coordinates.
+  </p>
+
+  X: <input type="text" id="x" readonly>
+  Y: <input type="text" id="y" readonly>
+
+  <script>
+    function changeStyle() {
+      let h = document.getElementById("heading");
+      h.style.color = "red";
+      h.style.fontFamily = "Arial";
+    }
+
+    function resetStyle() {
+      let h = document.getElementById("heading");
+      h.style.color = "black";
+      h.style.fontFamily = "Times New Roman";
+    }
+
+    function showCoords(e) {
+      document.getElementById("x").value = e.clientX;
+      document.getElementById("y").value = e.clientY;
+    }
+  </script>
+
+</body>
+
+</html>

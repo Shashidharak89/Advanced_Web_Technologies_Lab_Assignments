@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form with Help Box</title>
+    <style>
+        #help {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 10px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        RegNo: <input type="text" onfocus="showHelp('Enter your registration number')"><br><br>
+        Name: <input type="text" onfocus="showHelp('Enter your full name')"><br><br>
+        Email: <input type="text" onfocus="showHelp('Enter a valid email ID')"><br><br>
+        Phone: <input type="text" onfocus="showHelp('Enter 10-digit phone number')"><br><br>
+    </form>
+
+    <div id="help">Help will appear here</div>
+
+    <script>
+        function showHelp(msg) {
+            document.getElementById("help").innerText = msg;
+        }
+    </script>
+
+</body>
+
+</html>

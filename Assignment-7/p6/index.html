@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Move Text to Click</title>
+  <style>
+    #text {
+      position: absolute;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body onclick="moveText(event)">
+
+  <p id="text">Welcome to NMAMIT Nitte</p>
+
+  <script>
+    function moveText(e) {
+      let x = e.clientX - 130;
+      let y = e.clientY - 25;
+      let t = document.getElementById("text");
+      t.style.left = x + "px";
+      t.style.top = y + "px";
+    }
+  </script>
+
+</body>
+
+</html>
