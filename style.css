@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#D5D8DC ;
+}
+nav{
+    background-color: #2E4053;
+    height:80px;
+    color:#BFC9CA;
+    text-align: center;
+    font-size:clamp(1rem, 2.5vw, 2rem);
+}
