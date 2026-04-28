@@ -6,9 +6,25 @@ body{
     background-color:#D5D8DC ;
 }
 nav{
+    padding:20px;
     background-color: #2E4053;
     height:80px;
     color:#BFC9CA;
     text-align: center;
     font-size:clamp(1rem, 2.5vw, 2rem);
+}
+
+.assignment{
+    margin:20px;
+    border:2px solid black;
+    border-radius:20px;
+    padding:15px;
+}
+.assignment a{
+    text-decoration: none;
+}
+
+.assignment-title{
+    font-size:larger;
+    color:black;
 }
